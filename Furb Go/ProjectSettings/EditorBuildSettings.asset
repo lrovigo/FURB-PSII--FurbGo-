@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SIS.unity
     guid: 07b2e37bda7caf14d9ebb06cb7e20ff0
+  - enabled: 1
+    path: Assets/Scenes/Psicologia.unity
+    guid: 0de6cb7f99f515f43b7ac7bc3d06c565
   m_configObjects: {}
