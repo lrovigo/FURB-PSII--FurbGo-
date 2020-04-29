@@ -1,0 +1,3 @@
+No dia de hoje(28.04.2020) conseguimos(Sidnei E Leonardo) avançar relativamente bem na produção da interface, construindo seus botões e alguns menus, e os tornando funcionais. 
+Estamos com um certo atraso devido ao fato de não termos trablhado na semana anterior, a qual haviamos previsto terminar as telas, porém era feriado.
+Enquanto isso, Gabriel foi ao site da FURB e coletou informações dos cursos, as quais serão disponibilizadas no app.
