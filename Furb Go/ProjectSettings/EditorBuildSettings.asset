@@ -9,36 +9,36 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/Scenes/BCC.unity
-    guid: 11a2ed8b9929fce4086ad0ebcc3ec360
-  - enabled: 1
     path: Assets/Scenes/InfoMenu.unity
     guid: d8c73f46f6fd1e34faddbd8f4d7a9c2c
   - enabled: 1
     path: Assets/Scenes/SIS.unity
     guid: 07b2e37bda7caf14d9ebb06cb7e20ff0
   - enabled: 1
-    path: Assets/Scenes/Psicologia.unity
-    guid: 0de6cb7f99f515f43b7ac7bc3d06c565
+    path: Assets/Scenes/Artes.unity
+    guid: d3e9cc03f8f10c6498c069f03cbbd2b0
   - enabled: 1
-    path: Assets/Scenes/Sociologia.unity
-    guid: 3aad8f549ae752941911f175882ffbf1
-  - enabled: 1
-    path: Assets/Scenes/Moda.unity
-    guid: cd6f57cca6b855040ba9d0733f4a9e56
-  - enabled: 1
-    path: Assets/Scenes/Direito.unity
-    guid: ce89f80301127dd489b67e4d0a861eec
-  - enabled: 1
-    path: Assets/Scenes/Fisioterapia.unity
-    guid: 0e2caed2b48f00c40adeba622630c00c
-  - enabled: 1
-    path: Assets/Scenes/Design.unity
-    guid: 9df6c0fb15e3bcb4793f47ce2cf61dcd
+    path: Assets/Scenes/BCC.unity
+    guid: 432c4cbfa3597b948a6f9e67c595d492
   - enabled: 1
     path: "Assets/Scenes/Dan\xE7a.unity"
-    guid: bc67bccfd6e8d5c45bac409b2a44623c
+    guid: 444784ee770794b4789ff5e1dca6d385
   - enabled: 1
-    path: Assets/Scenes/Artes.unity
-    guid: e76e8fc11592d6c428050ee7402535a6
+    path: Assets/Scenes/Design.unity
+    guid: 1939556379cbeee42b277b19a5f90a4f
+  - enabled: 1
+    path: Assets/Scenes/Moda.unity
+    guid: ed0c995c3b15f2249a6f9f05be464edd
+  - enabled: 1
+    path: Assets/Scenes/Psicologia.unity
+    guid: e170c68d6d8dd7d4e8cef7f4e3eb78c0
+  - enabled: 1
+    path: Assets/Scenes/Sociologia.unity
+    guid: 989a3137dbe7ae246b3b3b14b9e7b491
+  - enabled: 1
+    path: Assets/Scenes/Direito.unity
+    guid: 51cfaa50f76bfa3409aba19306873b6e
+  - enabled: 1
+    path: Assets/Scenes/Fisioterapia.unity
+    guid: 9d26b0c28d1b18448b487d3b81f6ef5f
   m_configObjects: {}
