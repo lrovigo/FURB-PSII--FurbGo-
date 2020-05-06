@@ -1,0 +1,1 @@
+Foi feita a apresentação do estado atual do projeto com a interface completa, começamos a definir a melhor maneira de criar um qrcode para detecção do vuforia, finalmente tomamos uma decisão final, e iniciamos o processo de lógica programacional para tratar o objeto escaneado.
