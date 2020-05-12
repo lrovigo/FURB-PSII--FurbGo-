@@ -189,7 +189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Sociologia
+  m_Text: "Ci\xEAncias Sociais"
 --- !u!222 &7878487
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 158779042}
   - component: {fileID: 158779041}
   m_Layer: 5
-  m_Name: Sociologia
+  m_Name: "Ci\xEAncias Sociais"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -359,7 +359,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Sociologia
+          m_StringArgument: "Ci\xEAncias Sociais"
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &158779042
@@ -1287,7 +1287,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Artes
+  m_Text: Artes Visuais
 --- !u!222 &872578262
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2364,7 +2364,7 @@ GameObject:
   - component: {fileID: 1775918663}
   - component: {fileID: 1775918662}
   m_Layer: 5
-  m_Name: Artes
+  m_Name: Artes Visuais
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2441,7 +2441,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Artes
+          m_StringArgument: Artes Visuais
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1775918663

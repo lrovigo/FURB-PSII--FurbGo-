@@ -728,7 +728,7 @@ GameObject:
   - component: {fileID: 1558844529}
   - component: {fileID: 1558844528}
   m_Layer: 5
-  m_Name: SisInfo
+  m_Name: "Dan\xE7aInfo"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -750,8 +750,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -73, y: 405}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -2, y: 405}
+  m_SizeDelta: {x: 180, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1558844528
 MonoBehaviour:
@@ -778,13 +778,19 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Informa\xE7\xF5es do curso de Dan\xE7a"
+  m_Text: "O curso de licenciatura em Dan\xE7a da FURB \xE9 o primeiro curso de dan\xE7a
+    do estado de Santa Catarina, e prepara o estudante para exercer a profiss\xE3o
+    de professor e bailarino, por meio de estudos te\xF3ricos e pr\xE1ticos. A forma\xE7\xE3o
+    dan\xE7a deste curso ter\xE1 o foco na doc\xEAncia, no pesquisador e no artista,
+    sendo essa constitu\xEDda em um n\xFAcleo: Forma\xE7\xE3o did\xE1tico-pedag\xF3gica,
+    e quatro campos: Disposi\xE7\xE3o Po\xE9tica; Forma\xE7\xE3o est\xE9tica/est\xE9sica
+    e \xE9tica, Forma\xE7\xE3o te\xF3rica e Compet\xEAncias T\xE9cnicas. "
 --- !u!222 &1558844529
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -728,7 +728,7 @@ GameObject:
   - component: {fileID: 1558844529}
   - component: {fileID: 1558844528}
   m_Layer: 5
-  m_Name: SisInfo
+  m_Name: DesignInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -750,8 +750,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -73, y: 405}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -5, y: 405}
+  m_SizeDelta: {x: 180, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1558844528
 MonoBehaviour:
@@ -778,13 +778,18 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Informa\xE7\xF5es do curso de Design"
+  m_Text: "Design \xE9 uma atividade que planeja, projeta e cria sistemas e objetos
+    utilit\xE1rios, aliando est\xE9tica, conforto e funcionalidade. O curso de Design
+    proporciona uma vis\xE3o global do mercado e estuda o ser humano em seus mais
+    variados aspectos. Pesquisar materiais e acompanhar as mudan\xE7as no comportamento
+    e nas novas necessidades dos consumidores, faz parte da atua\xE7\xE3o do designer
+    no mercado da inova\xE7\xE3o de produtos, sistemas e servi\xE7os."
 --- !u!222 &1558844529
 CanvasRenderer:
   m_ObjectHideFlags: 0

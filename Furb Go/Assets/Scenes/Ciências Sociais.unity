@@ -750,8 +750,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -73, y: 405}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -10, y: 405}
+  m_SizeDelta: {x: 180, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1558844528
 MonoBehaviour:
@@ -778,13 +778,18 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Informa\xE7\xF5es do curso de Artes\n"
+  m_Text: "O cientista social \xE9 um profissional capaz de elaborar an\xE1lises
+    rigorosas sobre diversos aspectos da sociedade, a partir das reflex\xF5es da
+    Sociologia, Antropologia e Ci\xEAncia Pol\xEDtica. Compreende a forma\xE7\xE3o
+    e os desafios da sociedade brasileira e regional, por meio de m\xFAltiplas interpreta\xE7\xF5es
+    sobre fen\xF4menos culturais, problemas sociais e pol\xEDticos, e o surgimento
+    de novas tecnologias."
 --- !u!222 &1558844529
 CanvasRenderer:
   m_ObjectHideFlags: 0

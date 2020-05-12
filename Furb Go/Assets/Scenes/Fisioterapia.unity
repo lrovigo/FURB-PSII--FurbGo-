@@ -750,8 +750,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -73, y: 405}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -2, y: 405}
+  m_SizeDelta: {x: 180, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1558844528
 MonoBehaviour:
@@ -778,13 +778,19 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Informa\xE7\xF5es do curso de Fisioterapia"
+  m_Text: "O aluno formado \xE9 capaz de avaliar, planejar e estabelecer as etapas
+    de tratamento, assim como selecionar, quantificar e qualificar os recursos, as
+    t\xE9cnicas e os m\xE9todos apropriados a cada caso em seus pacientes. Deve-se
+    seguir a legisla\xE7\xE3o especifica da profiss\xE3o, respeitando os preceitos
+    morais da sociedade. Al\xE9m disso, o fisioterapeuta pode atuar e liderar uma
+    equipe multiprofissional, de forma que perceba as atribui\xE7\xF5es do seu papel
+    e dos demais membros. "
 --- !u!222 &1558844529
 CanvasRenderer:
   m_ObjectHideFlags: 0

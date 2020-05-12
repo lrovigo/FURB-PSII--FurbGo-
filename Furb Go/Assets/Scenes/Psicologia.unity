@@ -750,8 +750,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -73, y: 405}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -6, y: 405}
+  m_SizeDelta: {x: 180, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1558844528
 MonoBehaviour:
@@ -778,13 +778,19 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Informa\xE7\xF5es do curso de Psicologia"
+  m_Text: "O Psic\xF3logo \xE9 um profissional que se ocupa de compreender a conduta
+    humana a partir de distintos referenciais: biol\xF3gico, sociol\xF3gico, econ\xF4mico,
+    est\xE9tico, pol\xEDtico e \xE9tico.\r\n \r\nO exerc\xEDcio da profiss\xE3o est\xE1
+    embasado em uma compreens\xE3o cr\xEDtica dos fen\xF4menos humanos e sociais,
+    fortalecendo o exerc\xEDcio da cidadania e da pr\xF3pria profiss\xE3o, tendo
+    em vista a promo\xE7\xE3o da qualidade de vida de indiv\xEDduos e grupos, organiza\xE7\xF5es
+    e comunidades."
 --- !u!222 &1558844529
 CanvasRenderer:
   m_ObjectHideFlags: 0
