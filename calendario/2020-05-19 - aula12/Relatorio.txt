@@ -1,0 +1,1 @@
+Hoje terminamos de colocar todos os nossos marcadores do vuforia dentro do projeto em um novo database e começamos a implementar a parte de localização que irá nos dizer a rota para o destino.
