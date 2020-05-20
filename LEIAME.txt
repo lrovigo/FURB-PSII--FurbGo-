@@ -1,0 +1,4 @@
+Baixe e instale o unity com a JDK do android
+Instale o visual studio para editar os fontes
+O repositório git usado para versionar o projeto é https://github.com/lrovigo/FURB-PSII--FurbGo-.git
+Após abrir o projeto no unity, é necessario importar o database do projeto, que se localiza dentro da pasta DB do projeto git
