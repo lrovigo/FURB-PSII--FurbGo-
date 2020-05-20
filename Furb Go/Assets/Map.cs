@@ -9,8 +9,10 @@ public class Map : MonoBehaviour
     public string BlocoSelecionado = string.Empty;
     public void SetSelected(string bloco)
     {
-        BlocoSelecionado = bloco;
+        bloco = bloco.Remove(0,6);
+        var find = new Caminhos();
         LabelBlocoSelecionado = GameObject.Find("LabelBlocoSelecionado").GetComponent<Text>();
-        LabelBlocoSelecionado.text = $"Você selecionou: {bloco}";
+        //LabelBlocoSelecionado.text = $"Você selecionou: {bloco}";
+        LabelBlocoSelecionado.text = find.FindPath(bloco);
     }
 }
