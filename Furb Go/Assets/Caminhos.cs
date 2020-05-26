@@ -39,26 +39,27 @@ public class Caminhos : MonoBehaviour
         Bloco U = new Bloco("U");
         Bloco V = new Bloco("V");
         Bloco W = new Bloco("W");
-        A.Vizinhos = new List<Bloco>() { B };
-        B.Vizinhos = new List<Bloco>() { A, I, C };
-        C.Vizinhos = new List<Bloco>() { B, E };
+        A.Vizinhos = new List<Bloco>() { B, M};
+        B.Vizinhos = new List<Bloco>() { A, I, C, M };
+        C.Vizinhos = new List<Bloco>() { B, E, M};
         E.Vizinhos = new List<Bloco>() { C, D, F };
         D.Vizinhos = new List<Bloco>() { E };
         F.Vizinhos = new List<Bloco>() { E, G };
         G.Vizinhos = new List<Bloco>() { F, H, J, L, N, K };
         I.Vizinhos = new List<Bloco>() { B, T, S, R, Q };
         T.Vizinhos = new List<Bloco>() { I, S };
-        S.Vizinhos = new List<Bloco>() { T, R, I, W, V, U };
-        R.Vizinhos = new List<Bloco>() { Q, S, I, W, V, U };
+        S.Vizinhos = new List<Bloco>() { T, R, I, W, U };
+        R.Vizinhos = new List<Bloco>() { Q, S, I, W, U };
         Q.Vizinhos = new List<Bloco>() { I, R, S, T };
-        U.Vizinhos = new List<Bloco>() { V, W, R, S, T };
-        V.Vizinhos = new List<Bloco>() { U, W, R, S, T };
-        W.Vizinhos = new List<Bloco>() { U, V, R, S, T };
+        U.Vizinhos = new List<Bloco>() { V, R, S, T };
+        V.Vizinhos = new List<Bloco>() { U, W };
+        W.Vizinhos = new List<Bloco>() { V, R, S, T };
         H.Vizinhos = new List<Bloco>() { G, J, L, N, K };
         J.Vizinhos = new List<Bloco>() { H, G, L, N, K };
         L.Vizinhos = new List<Bloco>() { H, G, J, N, K };
         N.Vizinhos = new List<Bloco>() { H, G, J, L, K };
         K.Vizinhos = new List<Bloco>() { H, G, J, L, N };
+        M.Vizinhos = new List<Bloco>() { A, B, C };
         blocos.AddRange(new[] { A, B, C, D, E, F, G, H, I, J, K, L, M, N, Q, R, S, T, U, V, W });
     }
     public string FindPath(string blocoDestino)
@@ -67,32 +68,35 @@ public class Caminhos : MonoBehaviour
         popularLista();
         Bloco origem = blocos.Find(p => p.Nome == "C");
         Bloco destino = blocos.Find(q => q.Nome == blocoDestino);
+        caminhos.Add(origem);
         SearchVizinhos(origem, destino);
         return string.Join("->", caminhos.Select(c => c.Nome));
     }
 
-    void SearchVizinhos(Bloco a, Bloco b)
+    void SearchVizinhos(Bloco origem, Bloco destino)
     {
         if (!achouCaminho)
-        {
-            foreach (var vizinho in a.Vizinhos)
+        { 
+            foreach (var vizinho in origem.Vizinhos)
             {
-                if (vizinho.Nome == b.Nome)
+                if (vizinho.Nome == destino.Nome)
                 {
                     achouCaminho = true;
+                    caminhos.Add(vizinho);
                     break;
                 }
                 if (!caminhos.Contains(vizinho))
                 {
                     caminhos.Add(vizinho);
-                    SearchVizinhos(vizinho, b);
+                    SearchVizinhos(vizinho, destino);
                     if (achouCaminho)
                     {
                         break;
                     }
                 }
-                caminhos.Remove(vizinho);
             }
+            if(!achouCaminho)
+                caminhos.Remove(origem);
         }
     }
 }
