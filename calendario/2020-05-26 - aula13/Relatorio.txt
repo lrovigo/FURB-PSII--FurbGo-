@@ -1,0 +1,1 @@
+Foi terminado o algoritmo de descobrir o caminho entre os blocos e iniciamos a parte de identificar o local de origem a partir do nome do QRCODE de cada bloco.
