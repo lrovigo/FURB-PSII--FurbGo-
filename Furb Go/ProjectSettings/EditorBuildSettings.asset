@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MapaFurb.unity
+    guid: 6ea7dbf2474306d41bc9b2da83fdab82
+  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
@@ -29,9 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Moda.unity
     guid: ed0c995c3b15f2249a6f9f05be464edd
-  - enabled: 1
-    path: Assets/Scenes/MapaFurb.unity
-    guid: 6ea7dbf2474306d41bc9b2da83fdab82
   - enabled: 1
     path: Assets/Scenes/Psicologia.unity
     guid: e170c68d6d8dd7d4e8cef7f4e3eb78c0

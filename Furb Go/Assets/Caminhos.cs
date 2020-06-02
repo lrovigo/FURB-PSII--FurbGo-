@@ -18,30 +18,30 @@ public class Caminhos : MonoBehaviour
     void popularLista()
     {
         blocos.Clear();
-        Bloco A = new Bloco("A");
-        Bloco B = new Bloco("B");
-        Bloco C = new Bloco("C");
-        Bloco D = new Bloco("D");
-        Bloco E = new Bloco("E");
-        Bloco F = new Bloco("F");
-        Bloco G = new Bloco("G");
-        Bloco H = new Bloco("H");
-        Bloco I = new Bloco("I");
-        Bloco J = new Bloco("J");
-        Bloco K = new Bloco("K");
-        Bloco L = new Bloco("L");
-        Bloco M = new Bloco("M");
-        Bloco N = new Bloco("N");
-        Bloco Q = new Bloco("Q");
-        Bloco R = new Bloco("R");
-        Bloco S = new Bloco("S");
-        Bloco T = new Bloco("T");
-        Bloco U = new Bloco("U");
-        Bloco V = new Bloco("V");
-        Bloco W = new Bloco("W");
-        A.Vizinhos = new List<Bloco>() { B, M};
+        Bloco A = new Bloco("A", -3, 0); 
+        Bloco B = new Bloco("B", -2, 0);
+        Bloco C = new Bloco("C", -1, 0); 
+        Bloco D = new Bloco("D", 0, 1); // Exceção
+        Bloco E = new Bloco("E", 0, 0); 
+        Bloco F = new Bloco("F", 1, 0); 
+        Bloco G = new Bloco("G", 2, 0); 
+        Bloco H = new Bloco("H", 3, 0); 
+        Bloco I = new Bloco("I", -2, 1);
+        Bloco J = new Bloco("J", 4, 0); 
+        Bloco K = new Bloco("K", 6, 0); 
+        Bloco L = new Bloco("L", 4, -2);
+        Bloco M = new Bloco("M", -2, -3);
+        Bloco N = new Bloco("N", 5, -1);
+        Bloco Q = new Bloco("Q",-4, 1);
+        Bloco R = new Bloco("R", -3, 2);
+        Bloco S = new Bloco("S", -2, 2);
+        Bloco T = new Bloco("T", -1, 2);
+        Bloco U = new Bloco("U", -6, 2); 
+        Bloco V = new Bloco("V", -5, 3);
+        Bloco W = new Bloco("W", -4, 3);
+        A.Vizinhos = new List<Bloco>() { B, M };
         B.Vizinhos = new List<Bloco>() { A, I, C, M };
-        C.Vizinhos = new List<Bloco>() { B, E, M};
+        C.Vizinhos = new List<Bloco>() { B, E, M };
         E.Vizinhos = new List<Bloco>() { C, D, F };
         D.Vizinhos = new List<Bloco>() { E };
         F.Vizinhos = new List<Bloco>() { E, G };
@@ -64,19 +64,26 @@ public class Caminhos : MonoBehaviour
     }
     public string FindPath(string blocoDestino)
     {
-        achouCaminho = false;
-        popularLista();
-        Bloco origem = blocos.Find(p => p.Nome == "C");
-        Bloco destino = blocos.Find(q => q.Nome == blocoDestino);
-        caminhos.Add(origem);
-        SearchVizinhos(origem, destino);
-        return string.Join("->", caminhos.Select(c => c.Nome));
+        if (!string.IsNullOrEmpty(Init.qrCode))
+        {
+            achouCaminho = false;
+            popularLista();
+            Bloco origem = blocos.Find(p => p.Nome == Init.qrCode);
+            Bloco destino = blocos.Find(q => q.Nome == blocoDestino);
+            caminhos.Add(origem);
+            if(origem.Nome == destino.Nome)
+                return "Você já está no seu destino!";
+            
+            SearchVizinhos(origem, destino);
+            return string.Join("->", caminhos.Select(c => c.Nome));
+        }
+        return "Por favor escaneie o QrCode de localização mais proximo";
     }
 
     void SearchVizinhos(Bloco origem, Bloco destino)
     {
         if (!achouCaminho)
-        { 
+        {
             foreach (var vizinho in origem.Vizinhos)
             {
                 if (vizinho.Nome == destino.Nome)
@@ -95,7 +102,7 @@ public class Caminhos : MonoBehaviour
                     }
                 }
             }
-            if(!achouCaminho)
+            if (!achouCaminho)
                 caminhos.Remove(origem);
         }
     }
@@ -106,10 +113,14 @@ public class Bloco
 
     public string Nome { get; set; }
     public List<Bloco> Vizinhos { get; set; }
+    public int OrdemX { get; set; }
+    public int OrdemY { get; set; }
 
-    public Bloco(string nome)
+    public Bloco(string nome, int ordemX, int ordemY)
     {
         this.Nome = nome;
+        this.OrdemX = ordemX; 
+        this.OrdemY = ordemY; 
     }
 
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,16 +25,9 @@ public class Init : MonoBehaviour
 
         foreach (TrackableBehaviour tb in tbs)
         {
-            teste.text = tb.TrackableName + tb.CurrentStatus;
-            if (tb.CurrentStatus == TrackableBehaviour.Status.DETECTED)
-            {
-                Debug.Log("to aqui");
-                Debug.Log(tb.CurrentStatus);
-                string name = tb.TrackableName;
-                teste.text = name;
-
-            }
+            qrCode = tb.TrackableName;
+            var menu = new Menu();
+            menu.ChangeScene(ScenesNames.MapaFurb);
         }
-
     }
 }
