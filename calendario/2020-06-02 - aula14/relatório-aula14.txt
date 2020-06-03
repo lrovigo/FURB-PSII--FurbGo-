@@ -1,0 +1,2 @@
+Iniciamos o mapeamento do mapa da Furb para conseguir direções de forma mais descritiva,
+melhoramos alguns quesitos de interface, alteramos os ícones de algumas telas e ajustamos um método que estava descontinuado.
