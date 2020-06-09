@@ -1,0 +1,1 @@
+hoje, agora que já temos o algoritmo de mapeamento de blocos para indicar o caminho até algum outro bloco, iniciamos o algoritmo que apresenta ao usuário o step-by-step para indicar ao usuário o a rota a ser seguida até o destino, assim também como o design de como será apresentado esse resultado. 
