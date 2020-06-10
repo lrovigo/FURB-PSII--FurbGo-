@@ -15,7 +15,7 @@ public class Caminhos : MonoBehaviour
 
     }
 
-    void popularLista()
+    void PopularLista()
     {
         blocos.Clear();
         Bloco A = new Bloco("A", -3, 0); 
@@ -67,7 +67,7 @@ public class Caminhos : MonoBehaviour
         if (!string.IsNullOrEmpty(Init.qrCode))
         {
             achouCaminho = false;
-            popularLista();
+            PopularLista();
             Bloco origem = blocos.Find(p => p.Nome == Init.qrCode);
             Bloco destino = blocos.Find(q => q.Nome == blocoDestino);
             caminhos.Add(origem);
@@ -75,7 +75,7 @@ public class Caminhos : MonoBehaviour
                 return "Você já está no seu destino!";
             
             SearchVizinhos(origem, destino);
-            return string.Join("->", caminhos.Select(c => c.Nome));
+            return string.Join(">", caminhos.Select(c => c.Nome));
         }
         return "Por favor escaneie o QrCode de localização mais proximo";
     }
