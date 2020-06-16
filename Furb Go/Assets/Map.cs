@@ -8,13 +8,15 @@ public class Map : MonoBehaviour
 {
     public Text LabelBlocoSelecionado;
     public string BlocoSelecionado = string.Empty;
+
+    public string[] locais;
     public void SetSelected(string bloco)
     {
         bloco = bloco.Remove(0,6);
         var find = new Caminhos();
         LabelBlocoSelecionado = GameObject.Find("LabelBlocoSelecionado").GetComponent<Text>();
         
-        var locais  = find.FindPath(bloco).Split('>');
+        locais  = find.FindPath(bloco).Split('>');
         var caminhos = new List<string>();
         for(int i = 0; i < locais.Length-1; i++)
         {
@@ -54,5 +56,10 @@ public class Map : MonoBehaviour
     {
         var local = Caminhos.blocos.FirstOrDefault(p => p.Nome == nome);
         return local;
+    }
+
+    void desenharCaminhoNoMapa(){
+        //TODO
+        
     }
 }

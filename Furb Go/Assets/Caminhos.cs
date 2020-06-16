@@ -79,7 +79,6 @@ public class Caminhos : MonoBehaviour
         }
         return "Por favor escaneie o QrCode de localização mais proximo";
     }
-
     void SearchVizinhos(Bloco origem, Bloco destino)
     {
         if (!achouCaminho)
