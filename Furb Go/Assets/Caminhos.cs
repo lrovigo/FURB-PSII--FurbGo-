@@ -22,7 +22,7 @@ public class Caminhos : MonoBehaviour
         Bloco A = new Bloco("A", -3, 0);
         Bloco B = new Bloco("B", -2, 0);
         Bloco C = new Bloco("C", -1, 0);
-        Bloco D = new Bloco("D", 0, 1); // Exceção
+        Bloco D = new Bloco("D", 0, 0); // Exceção
         Bloco E = new Bloco("E", 0, 0);
         Bloco F = new Bloco("F", 1, 0);
         Bloco G = new Bloco("G", 2, 0);
@@ -73,6 +73,27 @@ public class Caminhos : MonoBehaviour
         };
         A.PontosReferencia.Add(M, PontosDeReferencia.AParaM);
 
+        B.PontosReferencia.Add(I, PontosDeReferencia.BParaI);
+
+        C.PontosReferencia.Add(F, PontosDeReferencia.CParaF);
+        C.PontosReferencia.Add(I, PontosDeReferencia.CParaI);
+
+        M.PontosReferencia.Add(A, PontosDeReferencia.MParaA);
+
+        R.PontosReferencia.Add(Q, PontosDeReferencia.RParaQ);
+        R.PontosReferencia.Add(U, PontosDeReferencia.RParaU);
+
+        U.PontosReferencia.Add(R, PontosDeReferencia.UParaR);
+
+        S.PontosReferencia.Add(Q, PontosDeReferencia.STParaQ);
+
+        T.PontosReferencia.Add(Q, PontosDeReferencia.STParaQ);
+
+        Q.PontosReferencia.Add(R, PontosDeReferencia.QParaRST);
+        Q.PontosReferencia.Add(S, PontosDeReferencia.QParaRST);
+        Q.PontosReferencia.Add(T, PontosDeReferencia.QParaRST);
+
+        F.PontosReferencia.Add(C, PontosDeReferencia.FParaC);
 
         blocos.AddRange(new[] { A, B, C, D, E, F, G, H, I, J, K, L, M, N, Q, R, S, T, U, V, W });
     }
