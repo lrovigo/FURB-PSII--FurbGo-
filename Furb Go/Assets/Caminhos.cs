@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -40,9 +41,9 @@ public class Caminhos : MonoBehaviour
         Bloco V = new Bloco("V", -5, 3);
         Bloco W = new Bloco("W", -4, 3);
         A.Vizinhos = new List<Bloco>() { B, M };
-        B.Vizinhos = new List<Bloco>() { A, I, C, M };
-        C.Vizinhos = new List<Bloco>() { B, E, M };
-        E.Vizinhos = new List<Bloco>() { C, D, F };
+        B.Vizinhos = new List<Bloco>() { A, I, C};
+        C.Vizinhos = new List<Bloco>() { B, F };
+        E.Vizinhos = new List<Bloco>() { D, F };
         D.Vizinhos = new List<Bloco>() { E };
         F.Vizinhos = new List<Bloco>() { E, G };
         G.Vizinhos = new List<Bloco>() { F, H, J, L, N, K };
@@ -59,11 +60,25 @@ public class Caminhos : MonoBehaviour
         L.Vizinhos = new List<Bloco>() { H, G, J, N, K };
         N.Vizinhos = new List<Bloco>() { H, G, J, L, K };
         K.Vizinhos = new List<Bloco>() { H, G, J, L, N };
-        M.Vizinhos = new List<Bloco>() { A, B, C };
+        M.Vizinhos = new List<Bloco>() { A};
+        I.PontosReferencia = new Dictionary<Bloco, string>
+        {
+            { R, PontosDeReferencia.IParaRSTQ },
+            { S, PontosDeReferencia.IParaRSTQ },
+            { T, PontosDeReferencia.IParaRSTQ },
+            { Q, PontosDeReferencia.IParaRSTQ },
+            { A, PontosDeReferencia.IParaABC },
+            { B, PontosDeReferencia.IParaABC },
+            { C, PontosDeReferencia.IParaABC }
+        };
+        A.PontosReferencia.Add(M, PontosDeReferencia.AParaM);
+        
+
         blocos.AddRange(new[] { A, B, C, D, E, F, G, H, I, J, K, L, M, N, Q, R, S, T, U, V, W });
     }
     public string FindPath(string blocoDestino)
     {
+        Init.qrCode = "V";
         if (!string.IsNullOrEmpty(Init.qrCode))
         {
             achouCaminho = false;
@@ -107,19 +122,4 @@ public class Caminhos : MonoBehaviour
     }
 }
 
-public class Bloco
-{
 
-    public string Nome { get; set; }
-    public List<Bloco> Vizinhos { get; set; }
-    public int OrdemX { get; set; }
-    public int OrdemY { get; set; }
-
-    public Bloco(string nome, int ordemX, int ordemY)
-    {
-        this.Nome = nome;
-        this.OrdemX = ordemX; 
-        this.OrdemY = ordemY; 
-    }
-
-}

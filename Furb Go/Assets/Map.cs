@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -45,7 +46,11 @@ public class Map : MonoBehaviour
                 : $"até chegar no bloco {proximoLocal.Nome}";
             if (!string.IsNullOrEmpty(caminhoX) && !string.IsNullOrEmpty(caminhoY))
                 conector = " e ";
-            caminhos.Add($"{caminhoX}{conector}{caminhoY} " + str);
+
+            if (local.PontosReferencia.ContainsKey(proximoLocal))
+                caminhos.Add(local.PontosReferencia.FirstOrDefault(p => p.Key == proximoLocal).Value + $" depois {(!string.IsNullOrEmpty(caminhoX)?caminhoX: "ande" )} {str}");
+            else
+                caminhos.Add($"{caminhoX}{conector}{caminhoY} " + str);
         }
         foreach(var passo in caminhos)
             LabelBlocoSelecionado.text += passo + " \n";
