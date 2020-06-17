@@ -7,6 +7,7 @@ using UnityEngine;
 public class Caminhos : MonoBehaviour
 {
     public static List<Bloco> blocos = new List<Bloco>();
+    public static List<List<Bloco>> listaBlocos = new List<List<Bloco>>();
     private bool achouCaminho = false;
 
     private List<Bloco> caminhos = new List<Bloco>();
@@ -50,7 +51,7 @@ public class Caminhos : MonoBehaviour
         I.Vizinhos = new List<Bloco>() { B, C, T, S, R, Q };
         T.Vizinhos = new List<Bloco>() { I, S, Q };
         S.Vizinhos = new List<Bloco>() { T, R, I, W, V, U, Q };
-        R.Vizinhos = new List<Bloco>() { Q, S, I, U};
+        R.Vizinhos = new List<Bloco>() { Q, S, I, U };
         Q.Vizinhos = new List<Bloco>() { I, R, S, T };
         U.Vizinhos = new List<Bloco>() { V, R };
         V.Vizinhos = new List<Bloco>() { U, W, S };
@@ -110,35 +111,35 @@ public class Caminhos : MonoBehaviour
                 return "Você já está no seu destino!";
 
             SearchVizinhos(origem, destino);
-            return string.Join(">", caminhos.Select(c => c.Nome));
+            var menorCaminho = new List<Bloco>();
+            listaBlocos.Sort((a, b) => a.Count - b.Count);
+            menorCaminho = listaBlocos.First();
+
+            return string.Join(">", menorCaminho.Select(c => c.Nome));
         }
         return "Por favor escaneie o QrCode de localização mais proximo";
     }
     void SearchVizinhos(Bloco origem, Bloco destino)
     {
-        if (!achouCaminho)
+        foreach (var vizinho in origem.Vizinhos)
         {
-            foreach (var vizinho in origem.Vizinhos)
+            if (vizinho.Nome == destino.Nome)
             {
-                if (vizinho.Nome == destino.Nome)
-                {
-                    achouCaminho = true;
-                    caminhos.Add(vizinho);
-                    break;
-                }
-                if (!caminhos.Contains(vizinho))
-                {
-                    caminhos.Add(vizinho);
-                    SearchVizinhos(vizinho, destino);
-                    if (achouCaminho)
-                    {
-                        break;
-                    }
-                }
+                caminhos.Add(vizinho);
+                var novalista = new Bloco[caminhos.Count()];
+                caminhos.CopyTo(novalista);
+                listaBlocos.Add(novalista.ToList());
+                caminhos.Remove(vizinho);
+                break;
             }
-            if (!achouCaminho)
-                caminhos.Remove(origem);
+            if (!caminhos.Contains(vizinho))
+            {
+                caminhos.Add(vizinho);
+                SearchVizinhos(vizinho, destino);
+                caminhos.Remove(vizinho);
+            }
         }
+        caminhos.Remove(origem);
     }
 }
 
