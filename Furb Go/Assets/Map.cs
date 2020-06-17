@@ -13,13 +13,13 @@ public class Map : MonoBehaviour
     public string[] locais;
     public void SetSelected(string bloco)
     {
-        bloco = bloco.Remove(0,6);
+        bloco = bloco.Remove(0, 6);
         var find = new Caminhos();
         LabelBlocoSelecionado = GameObject.Find("LabelBlocoSelecionado").GetComponent<Text>();
-        
-        locais  = find.FindPath(bloco).Split('>');
+
+        locais = find.FindPath(bloco).Split('>');
         var caminhos = new List<string>();
-        for(int i = 0; i < locais.Length-1; i++)
+        for (int i = 0; i < locais.Length - 1; i++)
         {
             var local = RetornarLocal(locais[i]);
             var proximoLocal = RetornarLocal(locais[i + 1]);
@@ -41,18 +41,18 @@ public class Map : MonoBehaviour
                 caminhoY = string.Empty;
 
             var conector = string.Empty;
-            var str = i+1 == locais.Length-1
+            var str = i + 1 == locais.Length - 1
                 ? $"para chegar no seu destino, o bloco {proximoLocal.Nome}"
                 : $"até chegar no bloco {proximoLocal.Nome}";
             if (!string.IsNullOrEmpty(caminhoX) && !string.IsNullOrEmpty(caminhoY))
                 conector = " e ";
 
             if (local.PontosReferencia.ContainsKey(proximoLocal))
-                caminhos.Add(local.PontosReferencia.FirstOrDefault(p => p.Key == proximoLocal).Value + $" depois {(!string.IsNullOrEmpty(caminhoX)?caminhoX: "ande" )} {str}");
+                caminhos.Add(local.PontosReferencia.FirstOrDefault(p => p.Key == proximoLocal).Value + $" depois {(!string.IsNullOrEmpty(caminhoX) ? caminhoX : "ande")} {str}");
             else
                 caminhos.Add($"{caminhoX}{conector}{caminhoY} " + str);
         }
-        foreach(var passo in caminhos)
+        foreach (var passo in caminhos)
             LabelBlocoSelecionado.text += passo + " \n";
 
     }
@@ -63,8 +63,9 @@ public class Map : MonoBehaviour
         return local;
     }
 
-    void desenharCaminhoNoMapa(){
+    void desenharCaminhoNoMapa()
+    {
         //TODO
-        
+
     }
 }
