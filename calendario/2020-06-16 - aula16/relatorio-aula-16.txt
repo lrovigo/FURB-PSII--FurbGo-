@@ -1,0 +1,1 @@
+Foi feito uma melhoria no mapa, podendo dar zoom e se encaixando melhor em telas de outros celulares, também foi iniciado uma melhoria a forma que descrevemos qual caminho tomar, em vez de apenas dizer "ande a direita" podermos usar algum ponto de referencia para ajudar o usuário a se localizar melhor.
