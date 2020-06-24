@@ -1,0 +1,1 @@
+Hoje trabalhamos para melhorar a interface gráfica adicionando um menu em formato horizontal e realizando algumas outras melhorias no formato de como é apresentado as informações 
