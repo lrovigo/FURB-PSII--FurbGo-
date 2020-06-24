@@ -9,5 +9,6 @@ namespace Assets
     public static class ScenesNames
     {
         public static string MapaFurb => "MapaFurb";
+        public static string Resultado => "Resultado";
     }
 }
