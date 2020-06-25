@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Assets;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Resultado : MonoBehaviour
@@ -25,14 +27,16 @@ public class Resultado : MonoBehaviour
             {
                 var botao = (GameObject)Instantiate(BotaoBloco);
                 botao.transform.SetParent(ScrollLayer.transform,false);
-                botao.GetComponent<Button>().onClick.AddListener(OnClick);
+                botao.GetComponent<Button>().onClick.AddListener(() => OnClick(caminho));
                 botao.transform.GetChild(0).GetComponent<Text>().text = "Bloco "+ caminho.Key.Nome;
             }
         }
     }
 
-    private void OnClick()
+    void OnClick(KeyValuePair<Bloco, string> pairAtual)
     {
-        //fazer alguma coisa
+        ResultadoDescricao.keyPair = pairAtual;
+        Menu menu = new Menu();
+        menu.ChangeScene(ScenesNames.ResultadoDescricao);
     }
 }

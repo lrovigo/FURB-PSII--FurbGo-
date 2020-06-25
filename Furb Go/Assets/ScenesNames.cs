@@ -10,5 +10,6 @@ namespace Assets
     {
         public static string MapaFurb => "MapaFurb";
         public static string Resultado => "Resultado";
+        public static string ResultadoDescricao => "ResultadoDescricao";
     }
 }
