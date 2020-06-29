@@ -100,6 +100,7 @@ public class Caminhos : MonoBehaviour
     }
     public string FindPath(string blocoDestino)
     {
+        Init.qrCode = "V";
         if (!string.IsNullOrEmpty(Init.qrCode))
         {
             achouCaminho = false;

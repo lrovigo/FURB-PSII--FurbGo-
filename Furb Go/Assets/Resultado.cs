@@ -27,8 +27,8 @@ public class Resultado : MonoBehaviour
             {
                 var botao = (GameObject)Instantiate(BotaoBloco);
                 botao.transform.SetParent(ScrollLayer.transform,false);
-                botao.GetComponent<Button>().onClick.AddListener(() => OnClick(caminho));
-                botao.transform.GetChild(0).GetComponent<Text>().text = "Bloco "+ caminho.Key.Nome;
+                botao.transform.GetChild(0).GetComponent<Button>().onClick.AddListener(() => OnClick(caminho));
+                botao.transform.GetChild(0).transform.GetChild(0).GetComponent<Text>().text = "Bloco "+ caminho.Key.Nome;
             }
         }
     }
