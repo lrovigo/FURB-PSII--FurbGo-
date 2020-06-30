@@ -2,6 +2,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -11,6 +12,8 @@ public class Resultado : MonoBehaviour
     private bool Posicionando = false;
     public GameObject BotaoBloco;
     public GameObject ScrollLayer;
+    public Text LabelInfo;
+    public static string UltimoBlocoVisitado;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,12 @@ public class Resultado : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        LabelInfo.text = $@"Bloco de partida: {Map.Instrucoes.Keys.First().Nome} 
+
+Ultimo bloco visitado: {UltimoBlocoVisitado}
+
+Bloco de destino: {Map.Instrucoes.Keys.Last().Nome}";
         if (!Posicionando)
         {
             Posicionando = true;
@@ -35,6 +44,7 @@ public class Resultado : MonoBehaviour
 
     void OnClick(KeyValuePair<Bloco, string> pairAtual)
     {
+        UltimoBlocoVisitado = pairAtual.Key.Nome;
         ResultadoDescricao.keyPair = pairAtual;
         Menu menu = new Menu();
         menu.ChangeScene(ScenesNames.ResultadoDescricao);

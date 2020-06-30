@@ -100,7 +100,6 @@ public class Caminhos : MonoBehaviour
     }
     public string FindPath(string blocoDestino)
     {
-        Init.qrCode = "V";
         if (!string.IsNullOrEmpty(Init.qrCode))
         {
             achouCaminho = false;
@@ -115,7 +114,7 @@ public class Caminhos : MonoBehaviour
             var menorCaminho = new List<Bloco>();
             listaBlocos.Sort((a, b) => a.Count - b.Count);
             menorCaminho = listaBlocos.First();
-
+            listaBlocos.Clear();
             return string.Join(">", menorCaminho.Select(c => c.Nome));
         }
         return "Por favor escaneie o QrCode de localização mais proximo";

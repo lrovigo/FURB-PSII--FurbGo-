@@ -14,11 +14,13 @@ namespace Assets
         public static KeyValuePair<Bloco, string> keyPair;
         private bool Posicionando = false;
         public Text LabelDescription;
+        public Text LabelTitle;
         void Update()
         {
             if (!Posicionando)
             {
                 Posicionando = true;
+                LabelTitle.text = "Você está no bloco " + keyPair.Key.Nome;
                 LabelDescription.text = keyPair.Value;
             }
         }
